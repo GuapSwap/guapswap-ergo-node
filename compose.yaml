@@ -6,7 +6,7 @@ services:
     image: ergoplatform/ergo:${ERGO_NODE_VERSION:-latest}
     command: --${ERGO_NODE_NETWORK_TYPE} -c /home/ergo/ergo.conf
     volumes:
-      - ./ergo_node/.ergo:/home/ergo/.ergo
+      - ./ergo_node:/home/ergo/.ergo
       - ./ergo_node/ergo.conf:/home/ergo/ergo.conf:ro
     ports:
       - ${ERGO_NODE_PORT}:${ERGO_NODE_PORT}
